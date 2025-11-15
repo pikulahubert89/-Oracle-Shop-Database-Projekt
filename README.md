@@ -59,38 +59,6 @@ Repozytorium zawiera pełny model relacyjny, skrypty SQL, procedury PL/SQL, trig
                              | price                 |
                              +-----------------------+
 
-erDiagram
-
-    CUSTOMERS {
-        NUMBER customer_id PK
-        VARCHAR first_name
-        VARCHAR last_name
-        VARCHAR email
-    }
-
-    ORDERS {
-        NUMBER order_id PK
-        NUMBER customer_id FK
-        DATE order_date
-    }
-
-    ORDER_ITEMS {
-        NUMBER item_id PK
-        NUMBER order_id FK
-        NUMBER product_id FK
-        NUMBER quantity
-    }
-
-    PRODUCTS {
-        NUMBER product_id PK
-        VARCHAR name
-        NUMBER price
-    }
-
-    CUSTOMERS ||--o{ ORDERS : "places"
-    ORDERS ||--o{ ORDER_ITEMS : "contains"
-    PRODUCTS ||--o{ ORDER_ITEMS : "included in"
-
 ---
 
 ## ▶️ Instalacja i uruchomienie

@@ -56,7 +56,7 @@ Repozytorium zawiera pełny model relacyjny, skrypty SQL, procedury PL/SQL, trig
 
 ---
 
-## 👤 Autor
+## 👤 Autor Hubert Pikula
 Projekt przygotowany jako część portfolio programistycznego.  
 ```  
 

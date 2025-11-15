@@ -29,7 +29,36 @@ Repozytorium zawiera pełny model relacyjny, skrypty SQL, procedury PL/SQL, trig
 ---
 
 ## 📊 ERD (Entity Relationship Diagram)
-*(Umieść obraz ERD.png tutaj)*
++------------------+         +------------------+
+|    CUSTOMERS     |         |     ORDERS       |
++------------------+         +------------------+
+| PK customer_id   | 1     ∞ | PK order_id      |
+| first_name       |---------| FK customer_id   |
+| last_name        |         | order_date       |
+| email            |         +------------------+
++------------------+                  |
+                                       | 1
+                                       |  
+                                       | ∞
+                             +-----------------------+
+                             |     ORDER_ITEMS       |
+                             +-----------------------+
+                             | PK item_id            |
+                             | FK order_id           |
+                             | FK product_id         |
+                             | quantity              |
+                             +----------+------------+
+                                        |
+                                        | ∞  
+                                        | 1
+                             +-----------------------+
+                             |       PRODUCTS        |
+                             +-----------------------+
+                             | PK product_id         |
+                             | name                  |
+                             | price                 |
+                             +-----------------------+
+
 
 ---
 
